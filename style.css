@@ -7,7 +7,8 @@
 }
 
 html {
-    /* overflow-x : hidden; */
+    /* overflow : hidden; */
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -20,9 +21,9 @@ html {
 }
 
 body {
-    height : 100vh;
-    width : 100vw;
-    overflow-x : hidden;
+    height : auto;
+    width : auto;
+    /* overflow : hidden; */
 
 }
 
@@ -57,10 +58,10 @@ body {
     padding : 1rem .2rem;
     display : flex;
     align-items : center;
-    height : 100vh;
-    width : 100vw;
+    height : 100%;
+    width : 100%;
     position : absolute;
-    transform : translateX(1000px);
+    transform : translateX(-1000px);
     transition : all .4s ease-in-out;
     z-index : 44;
     overflow : hidden;
@@ -98,7 +99,7 @@ body {
     transition : all .4s ease-in;
 }
 .menu-btn i {
-    font-size : 1.2rem;
+    font-size : 1.5rem;
     color : white;
     font-weight : light;
     transition : all .4s ease-in;
@@ -313,4 +314,48 @@ body {
     color : white;
     padding-bottom : 2rem;
     padding-top : 1rem;
+}
+.info h5 {
+    font-size : 1.7rem;
+    font-family : var(--alata-font);
+    font-weight : bolder;
+    color : white;
+}
+
+.list-wrapper {
+    margin-top : 1rem;
+    display : flex;
+    flex-direction : column;
+    list-style : none;
+}
+.list-wrapper li {
+    font-family : var(--alata-font);
+    font-size : 1rem;
+    color : white;
+    margin : 8px 0;
+    cursor : pointer;
+    transition : all .4s ease-in;
+}
+.list-wrapper li:hover {
+    color : rgb(167, 161, 161);
+}
+
+.brand-wrapper {
+    display : flex;
+    margin-top : 1rem;
+}
+.brand-wrapper i {
+    margin : 0 10px;
+    font-size : 1.4rem;
+    cursor : pointer;
+    transition : all .4s ease-in;
+}
+.brand-wrapper i:hover {
+    color : rgb(243, 107, 232);
+}
+.copyright {
+    margin-top : .5rem;
+    font-family : var(--alata-font);
+    font-size : .8rem;
+    color : rgb(167, 160, 160);
 }
