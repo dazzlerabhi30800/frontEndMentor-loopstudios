@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+html {
+    /* overflow-x : hidden; */
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+    --alata-font : 'Alata', sans-serif;
+    --josefin-font : 'Josefin Sans', sans-serif;
+}
+
+body {
+    height : 100vh;
+    width : 100vw;
+    overflow-x : hidden;
+
+}
+
+.container {
+    display : flex;
+    flex-direction : column;
+    padding : 0rem 0rem;
+    background : url('images/mobile/image-hero.jpg') no-repeat;
+    background-size : cover;
+    height : 75vh;
+    width : 100vw;
+}
+.nav-wrapper {
+    display : flex;
+    justify-content : space-between;
+}
+.logo {
+    font-family : var(--alata-font);
+    font-size : 2rem;
+    color : #fff;
+    cursor : pointer;
+    transition : all .5s ease-in-out;
+    margin : 10px 10px;
+    z-index : 444;
+}
+.logo:hover {
+    color : rgb(167, 161, 161);
+}
+
+.navbar {
+    background : rgb(3, 3, 3);
+    padding : 1rem .2rem;
+    display : flex;
+    align-items : center;
+    height : 100vh;
+    width : 100vw;
+    position : absolute;
+    transform : translateX(1000px);
+    transition : all .4s ease-in-out;
+    z-index : 44;
+    overflow : hidden;
+}
+.navbar.active {
+    transform : translateX(0px);
+}
+.nav-list {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    /* align-items : center; */
+    list-style : none;
+    margin-left : 10px;
+}
+.list-item {
+    margin : 10px 0;
+}
+.list-link {
+    text-decoration : none;
+    color : rgb(221, 217, 217);
+    font-size : 2rem;
+    font-family : var(--josefin-font);
+    transition : all .4s ease-in;
+}
+.list-link:hover {
+    color : rgb(170, 164, 164);
+}
+.menu-btn {
+    z-index : 44;
+    position : static;
+    margin-top : 1.7rem;
+    margin-right : 1.5rem;
+    cursor : pointer;
+    transition : all .4s ease-in;
+}
+.menu-btn i {
+    font-size : 1.2rem;
+    color : white;
+    font-weight : light;
+    transition : all .4s ease-in;
+}
+
+.quote-wrapper {
+    background : rgba(90, 87, 87, 0.288);
+    border : 1px solid rgba(255, 255, 255, 0.281);
+    backdrop-filter : blur(10px);
+    padding : 1rem 1rem;
+    padding-right : 6rem;
+    width : 80%;
+    display : flex;
+    justify-content : flex-start;
+    align-items : flex-start;
+    text-align : left;
+    align-self : center;
+    margin-top : 7rem;
+    z-index : 2;
+    position : relative;
+}
+.quote-wrapper {
+    font-size : 1.5rem;
+    color : white;
+    font-family : var(--josefin-font);
+    font-weight : lighter;
+    line-height : 1.2;
+}
+
+
+/* First Section  */
+
+.first {
+    padding : 2rem 1rem;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    background : white;
+}
+.vr-img {
+    width : 390px;
+    height : 250px;
+    position : relative;
+}
+.vr-img img {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    object-fit : cover;
+}
+.text-wrapper {
+    margin-top : 2rem;
+    display : flex;
+    flex-direction : column;
+    text-align : center;
+    justify-content : center;
+    align-items : center;
+    padding : 1rem 2rem;
+}
+.heading {
+    font-family : var(--josefin-font);
+    font-size : 2rem;
+    color : rgb(37, 36, 36);
+    font-weight : lighter;
+}
+.description {
+    margin-top : 1rem;
+    color : rgb(121, 115, 115);
+    font-family : var(--alata-font);
+    font-size : 1rem;
+    line-height : 1.5;
+    align-self : center;
+    padding-right : 1rem;
+}
+
+
+/* Create Section  */
+.create {
+    padding : 2rem 1rem;
+    background : white;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+}
+.main-heading {
+    font-size : 1.8rem;
+    color : black;
+    font-family : var(--josefin-font);
+    font-weight : lighter;
+
+}
+.card {
+    margin-top : 2rem;
+    /* background : red; */
+    padding : 1rem 1rem;
+    display : grid;
+    grid-template-columns : repeat(1, 1fr);
+}
+.img-wrapper {
+    margin : 10px 0;
+    position : relative;
+    display : flex;
+    /* justify-content : center; */
+    align-items : center;
+    cursor : pointer;
+    transition : all .4s ease-in-out;
+}
+.img-wrapper:after {
+    content : "";
+    position : absolute;
+    width : 100%;
+    height : 0%;
+    background : transparent;
+    transition : all .4s ease-in-out;
+    bottom : 0;
+}
+.img-wrapper:hover:after {
+    background : rgba(39, 38, 38, 0.466);   
+    height : 100%;
+}
+.img-wrapper:nth-child(1) {
+    background : url('images/mobile/image-deep-earth.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+.img-wrapper:nth-child(2) {
+    background : url('images/mobile/image-night-arcade.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+.img-wrapper:nth-child(3) {
+    background : url('images/mobile/image-soccer-team.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+.img-wrapper:nth-child(4) {
+    background : url('images/mobile/image-grid.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+.img-wrapper:nth-child(5) {
+    background : url('images/mobile/image-from-above.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+.img-wrapper:nth-child(6) {
+    background : url('images/mobile/image-pocket-borealis.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+.img-wrapper:nth-child(7) {
+    background : url('images/mobile/image-curiosity.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+.img-wrapper:nth-child(8) {
+    background : url('images/mobile/image-fisheye.jpg') no-repeat;
+    background-size : cover;
+    height : 110px;
+    width : 300px;
+}
+
+.title {
+    color : white;
+    font-family : var(--josefin-font);
+    margin-left : 1rem;
+    font-size : 1.3rem;
+    font-weight : lighter;
+    width : 100px;
+    position : relative;
+    z-index : 888;
+}
+.btn {
+    background : transparent;
+    margin-top : 1rem;
+}
+.btn a {
+    text-decoration : none;
+    font-family : var(--alata-font);
+    font-size : 1rem;
+    color : black;
+    border : 1px solid #000;
+    display : flex;
+    text-align : center;
+    padding : .8rem 4rem;
+    letter-spacing : 4px;
+    transition : all .5s ease-in-out;
+}
+.btn a:hover {
+    background : #000;
+    color : #fff;
+    border : none;
+}
+
+/* Footer Section  */
+.info {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    text-align : center;
+    background : black;
+    color : white;
+    padding-bottom : 2rem;
+    padding-top : 1rem;
+}
